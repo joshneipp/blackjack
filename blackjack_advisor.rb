@@ -361,7 +361,9 @@ blackjack = {"soft" => {2 => {13 => "Hit",
                          "11,11" => "Split"}}}
 
 def evaluate(card)
-card == "A" ? card = 11 : card
+  card == "A" ? card = 11 : card
+  #even shorter solution from class...
+  #card == "A" ? 11 : card
 end
 
 puts "Play some blackjack! I'll give you the best strategy for any hand."
@@ -386,9 +388,12 @@ dealer_card = evaluate(dealer).to_i
 
 if first_card == second_card
   player_hand = "#{first_card.to_s},#{second_card.to_s}"
-  puts "You should #{blackjack["pairs"][dealer_card][player_hand]}"
+  puts blackjack["pairs"][dealer_card][player_hand]
 elsif first_card == 11 || second_card == 11
-  puts "You should #{blackjack["soft"][dealer_card][player_hand]}"
+  puts blackjack["soft"][dealer_card][player_hand]
 else
-  puts "You should #{blackjack["hard"][dealer_card][player_hand]}"
+  puts blackjack["hard"][dealer_card][player_hand]
 end
+
+#Hand code below for checking
+#puts "Your hand is #{player_hand} and the dealer has #{dealer_card}"
