@@ -1,4 +1,6 @@
-# Blackjack Advisor
+#Blackjack Advisor
+
+###Description
 
 This program provides a user with the most 
 
