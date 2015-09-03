@@ -1,9 +1,4 @@
-#[2,3,4,5,6].each do |i| soft[2][4]=i
-#define a sample hash
-#soft = {dealer => {player => "action"}}
-
 blackjack = Hash.new
-blackjack = {"soft" => {4 => {19 => "Stand"}}}
 blackjack = {"soft" => {2 => {13 => "Hit",
                               14 => "Hit",
                               15 => "Hit",
@@ -365,21 +360,16 @@ blackjack = {"soft" => {2 => {13 => "Hit",
                          "10,10" => "Stand",
                          "11,11" => "Split"}}}
 
-
-
 def evaluate(card)
-  if card == "A"
-    card = 11
-  else
-    card
-  end
+card == "A" ? card = 11 : card
 end
 
 puts "Play some blackjack! I'll give you the best strategy for any hand."
 puts "Enter your two cards, and the dealer's card."
 puts "For face cards, please enter 10."
 puts "For an ace, please enter A."
-
+puts "------"
+puts
 puts "What is your first card?"
 first = gets.chomp
 first_card = evaluate(first).to_i
@@ -388,11 +378,11 @@ puts "What is your second card?"
 second = gets.chomp
 second_card = evaluate(second).to_i
 
+player_hand = first_card + second_card
+
 puts "What is the dealer's card?"
 dealer = gets.chomp
 dealer_card = evaluate(dealer).to_i
-
-player_hand = first_card + second_card
 
 if first_card == second_card
   player_hand = "#{first_card.to_s},#{second_card.to_s}"
