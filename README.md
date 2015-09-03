@@ -1,6 +1,6 @@
 #Blackjack Advisor
 
-###Description
+##Description
 
 This program provides a user with the most 
 
