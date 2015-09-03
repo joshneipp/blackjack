@@ -2,7 +2,7 @@
 
 ##Description
 
-This program provides a user with the "winningest" strategy for a given two-card blackjack hand.
+This program provides a user with the "winningest" strategy for a given two-card blackjack hand. Based on your two cards and the dealer's face-up card, you'll get advice on whether to "Hit", "Split", "Double", or "Stand".
 
 ##Instructions
 
@@ -16,7 +16,7 @@ Have fun!
 ####Disclaimer!
 I did not calculate the strategy on my own! Instead I borrowed from [this website](http://wizardofodds.com/games/blackjack/strategy/calculator/).
 
-Also...I refuse responsibility for any losses you may sustain at Atlantic City while using this program.
+Also...I refuse responsibility for any losses you may sustain in Atlantic City while using this program.
 
 ####Limitations
 Unfortunately, the program does not provide any further strategy if you "hit" after the initial two-card hand.
