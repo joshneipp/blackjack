@@ -375,9 +375,10 @@ def evaluate(card)
   end
 end
 
-puts "Play some blackjack! Enter your two cards, and the dealer's card."
-puts "For face cards, please enter 10"
-puts "For ace, please enter A"
+puts "Play some blackjack! I'll give you the best strategy for any hand."
+puts "Enter your two cards, and the dealer's card."
+puts "For face cards, please enter 10."
+puts "For an ace, please enter A."
 
 puts "What is your first card?"
 first = gets.chomp
@@ -395,12 +396,9 @@ player_hand = first_card + second_card
 
 if first_card == second_card
   player_hand = "#{first_card.to_s},#{second_card.to_s}"
-  puts "#{player_hand}"
   puts "You should #{blackjack["pairs"][dealer_card][player_hand]}"
 elsif first_card == 11 || second_card == 11
   puts "You should #{blackjack["soft"][dealer_card][player_hand]}"
 else
   puts "You should #{blackjack["hard"][dealer_card][player_hand]}"
 end
-
-puts "Your hand is #{player_hand} and dealer has #{dealer_card}"
